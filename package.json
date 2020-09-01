@@ -34,7 +34,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://wonho-jung.github.io/wonflix/",
+  "homepage":"https://nomadcoders.github.io/wonflix",
+
   "browserslist": {
     "production": [
       ">0.2%",
