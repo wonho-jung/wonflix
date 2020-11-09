@@ -29,11 +29,11 @@ const SearchPresenter = ({
   searchTerm,
   handleSubmit,
   error,
-  updateTerm
+  updateTerm,
 }) => (
   <Container>
     <Helmet>
-      <title>Search | Nomflix</title>
+      <title>Search | Wonflix</title>
     </Helmet>
     <Form onSubmit={handleSubmit}>
       <Input
@@ -48,7 +48,7 @@ const SearchPresenter = ({
       <>
         {movieResults && movieResults.length > 0 && (
           <Section title="Movie Results">
-            {movieResults.map(movie => (
+            {movieResults.map((movie) => (
               <Poster
                 key={movie.id}
                 id={movie.id}
@@ -63,7 +63,7 @@ const SearchPresenter = ({
         )}
         {tvResults && tvResults.length > 0 && (
           <Section title="TV Show Results">
-            {tvResults.map(show => (
+            {tvResults.map((show) => (
               <Poster
                 key={show.id}
                 id={show.id}
@@ -94,7 +94,7 @@ SearchPresenter.propTypes = {
   searchTerm: PropTypes.string,
   loading: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  updateTerm: PropTypes.func.isRequired
+  updateTerm: PropTypes.func.isRequired,
 };
 
 export default SearchPresenter;

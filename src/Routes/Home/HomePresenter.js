@@ -1,4 +1,3 @@
-
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -9,7 +8,7 @@ import Poster from "../../Components/Poster";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
-padding: 20px;
+  padding: 20px;
 `;
 
 const HomePresenter = ({ nowPlaying, popular, upComing, loading, error }) => (
@@ -22,11 +21,11 @@ const HomePresenter = ({ nowPlaying, popular, upComing, loading, error }) => (
     ) : (
       <Container>
         <Helmet>
-          <title>Movies | Nomflix</title>
+          <title>Movies | Wonflix</title>
         </Helmet>
         {nowPlaying && nowPlaying.length > 0 && (
           <Section title="Now Playing">
-            {nowPlaying.map(movie => (
+            {nowPlaying.map((movie) => (
               <Poster
                 key={movie.id}
                 id={movie.id}
@@ -41,7 +40,7 @@ const HomePresenter = ({ nowPlaying, popular, upComing, loading, error }) => (
         )}
         {upComing && upComing.length > 0 && (
           <Section title="Upcoming Movies">
-            {upComing.map(movie => (
+            {upComing.map((movie) => (
               <Poster
                 key={movie.id}
                 id={movie.id}
@@ -56,7 +55,7 @@ const HomePresenter = ({ nowPlaying, popular, upComing, loading, error }) => (
         )}
         {popular && popular.length > 0 && (
           <Section title="Popular Movies">
-            {popular.map(movie => (
+            {popular.map((movie) => (
               <Poster
                 key={movie.id}
                 id={movie.id}
@@ -80,7 +79,7 @@ HomePresenter.propTypes = {
   popular: PropTypes.array,
   upComing: PropTypes.array,
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
 
 export default HomePresenter;
